@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotización - Primavera Events Group</title>
-    <!-- Google Fonts for Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Editorial Luxury -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            /* Primavera Events Group Official Palette */
-            --primary: #111111; /* Dark/Black detected */
-            --primary-light: #333333;
-            --secondary: #BDC8D5; /* Light Blue/Grey detected */
-            --secondary-hover: #9aa8b8;
-            --accent: #2ea3f2; /* Bright Blue detected */
-            --text-dark: #222222;
-            --text-muted: #666666;
-            --bg-color: #fcfcfc;
-            --card-bg: #ffffff;
-            --accent-bg: #f5f7f9;
-            --border-color: #e2e6ea;
+            /* Primavera Official Branding: Luxury + Soft Minimal + Wedding Editorial */
+            --primary-pink: #F65C7A;
+            --primary-light: #FF8FA3;
+            --primary-dark: #1F1F1F;
+            --background-light: #F8F6F4;
+            --white: #FFFFFF;
+            --soft-pink: #FADADD;
+            --beige: #EFE7E1;
+            --gold-accent: #C9A96E;
+            --gray-text: #6D6D6D;
         }
 
         * {
@@ -32,21 +30,21 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-light);
+            color: var(--primary-dark);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3, h4, h5, .serif-text {
-            font-family: 'Abhaya Libre', serif;
+            font-family: 'Playfair Display', serif;
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            height: 55vh;
+            height: 50vh;
             min-height: 350px;
             background-image: url('portada.png');
             background-size: cover;
@@ -60,14 +58,14 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            /* Gradient overlay for better text readability */
-            background: linear-gradient(to bottom, rgba(30, 54, 45, 0.6), rgba(30, 54, 45, 0.85));
+            /* Overlay oscuro ligero */
+            background: rgba(0, 0, 0, 0.4);
         }
 
         .hero-content {
             position: relative;
             text-align: center;
-            color: #ffffff;
+            color: var(--white);
             z-index: 1;
             padding: 0 20px;
             animation: fadeInDown 1s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -81,11 +79,12 @@
         }
 
         .hero p {
+            font-family: 'Poppins', sans-serif;
             font-size: 1.1rem;
             font-weight: 300;
             letter-spacing: 5px;
             text-transform: uppercase;
-            color: var(--secondary);
+            color: var(--soft-pink);
             margin-top: 10px;
         }
 
@@ -100,19 +99,18 @@
 
         /* Card Styles */
         .quote-card {
-            background: var(--card-bg);
+            background: var(--white);
             border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             padding: 50px;
             animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
-            border-top: 6px solid var(--secondary);
         }
 
         .header-info {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 1px solid var(--beige);
             padding-bottom: 25px;
             margin-bottom: 35px;
             flex-wrap: wrap;
@@ -121,41 +119,40 @@
 
         .header-main h2 {
             font-size: 2.2rem;
-            color: var(--primary);
+            color: var(--primary-dark);
             line-height: 1.2;
         }
 
         .header-main p {
             font-size: 1.1rem;
-            color: var(--text-muted);
+            color: var(--gray-text);
             margin-top: 8px;
             font-weight: 500;
         }
 
         .badge-people {
             display: inline-block;
-            background: var(--accent-bg);
-            color: var(--secondary-hover);
-            padding: 4px 12px;
+            background: var(--soft-pink);
+            color: var(--primary-pink);
+            padding: 4px 14px;
             border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 500;
             margin-top: 5px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .date-box {
             text-align: right;
-            background: var(--bg-color);
+            background: var(--background-light);
             padding: 15px 25px;
             border-radius: 12px;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--beige);
         }
 
         .date-box span {
             display: block;
             font-size: 0.8rem;
-            color: var(--text-muted);
+            color: var(--gray-text);
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
@@ -164,14 +161,14 @@
         .date-box strong {
             display: block;
             font-size: 1.4rem;
-            color: var(--primary);
+            color: var(--primary-dark);
             font-family: 'Playfair Display', serif;
             margin-top: 3px;
         }
 
         /* Includes Section */
         .section-title {
-            color: var(--primary);
+            color: var(--primary-dark);
             font-size: 1.6rem;
             margin-bottom: 25px;
             display: flex;
@@ -180,7 +177,7 @@
         }
 
         .section-title i {
-            color: var(--secondary);
+            color: var(--primary-pink);
             font-size: 1.2rem;
         }
 
@@ -196,23 +193,23 @@
             align-items: flex-start;
             gap: 16px;
             padding: 20px;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
+            background: var(--white);
+            border: 1px solid var(--beige);
             border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .include-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
-            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Soft shadows hover */
+            border-color: var(--soft-pink);
         }
 
         .include-icon {
             width: 45px;
             height: 45px;
-            background: var(--accent-bg);
-            color: var(--secondary-hover);
+            background: var(--soft-pink);
+            color: var(--primary-pink);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -220,24 +217,24 @@
             font-size: 1.1rem;
             flex-shrink: 0;
             transition: background 0.3s ease;
+            box-shadow: inset 0 0 0 1px rgba(246, 92, 122, 0.1);
         }
 
         .include-item:hover .include-icon {
-            background: var(--secondary);
-            color: white;
+            background: var(--primary-pink);
+            color: var(--white);
         }
 
         .include-text h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 1.05rem;
             margin-bottom: 6px;
-            color: var(--primary);
+            color: var(--primary-dark);
         }
 
         .include-text p {
             font-size: 0.9rem;
-            color: var(--text-muted);
+            color: var(--gray-text);
             line-height: 1.5;
         }
 
@@ -245,8 +242,9 @@
         .pricing-container {
             border-radius: 12px;
             overflow: hidden;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--beige);
             margin-bottom: 35px;
+            background: var(--white);
         }
 
         .pricing-table {
@@ -260,26 +258,26 @@
         }
 
         .pricing-table thead {
-            background: var(--bg-color);
-            border-bottom: 2px solid var(--border-color);
+            background: var(--background-light);
+            border-bottom: 1px solid var(--beige);
         }
 
         .pricing-table th {
-            font-weight: 600;
-            color: var(--primary);
+            font-weight: 500;
+            color: var(--gray-text);
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .pricing-table td {
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--beige);
         }
 
         .pricing-table td.amount {
             text-align: right;
             font-weight: 500;
-            color: var(--text-dark);
+            color: var(--primary-dark);
         }
 
         .pricing-table th.amount-head {
@@ -291,40 +289,40 @@
         }
 
         .item-title {
-            font-weight: 600;
-            color: var(--primary);
+            font-weight: 500;
+            color: var(--primary-dark);
             display: block;
             margin-bottom: 4px;
         }
 
         .item-desc {
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: var(--gray-text);
         }
 
         .total-row {
-            background: var(--primary) !important;
-            color: white;
+            background: var(--background-light) !important;
         }
 
         .total-row td {
             padding: 25px 20px;
+            border-top: 1px solid var(--beige);
         }
 
         .total-row td:first-child {
-            font-family: 'Montserrat', sans-serif;
             text-align: right;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
+            color: var(--primary-dark);
         }
 
         .total-row td.amount {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 600;
-            color: var(--secondary);
+            color: var(--primary-pink);
             border-bottom: none;
         }
 
@@ -333,55 +331,51 @@
             text-align: center;
             margin-top: 50px;
             padding-top: 40px;
-            border-top: 2px dashed var(--border-color);
+            border-top: 1px solid var(--beige);
         }
 
         .cta-text {
             font-size: 1.1rem;
-            color: var(--text-dark);
+            color: var(--primary-dark);
             margin-bottom: 25px;
             font-family: 'Playfair Display', serif;
             font-style: italic;
         }
 
-        .btn-confirm {
+        .btn-primary {
+            background: linear-gradient(135deg, #F65C7A, #FF8FA3);
+            color: white;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 20px rgba(246, 92, 122, 0.3);
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            padding: 16px 45px;
-            background: linear-gradient(135deg, var(--accent), #1c88d1);
-            color: white;
             text-decoration: none;
-            font-weight: 600;
-            border-radius: 50px;
-            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(46, 163, 242, 0.25);
             border: none;
-            cursor: pointer;
         }
 
-        .btn-confirm:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(46, 163, 242, 0.35);
-            background: linear-gradient(135deg, #1c88d1, #156da8);
-        }
-
-        .btn-confirm i {
-            font-size: 1.3rem;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            color: white;
         }
 
         .disclaimer {
             margin-top: 20px;
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: var(--gray-text);
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 0 20px 40px;
-            color: var(--text-muted);
+            color: var(--gray-text);
             font-size: 0.9rem;
         }
 
@@ -417,22 +411,22 @@
             /* Responsive Table Trick */
             .pricing-table thead { display: none; }
             .pricing-table, .pricing-table tbody, .pricing-table tr, .pricing-table td { display: block; width: 100%; }
-            .pricing-table tr { margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
-            .pricing-table td { text-align: right; padding: 12px 15px; border-bottom: 1px solid var(--border-color); position: relative; padding-left: 50%; min-height: 45px; }
-            .pricing-table td::before { content: attr(data-label); position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-weight: 600; text-align: left; color: var(--primary); font-size: 0.85rem; }
+            .pricing-table tr { margin-bottom: 15px; border: 1px solid var(--beige); border-radius: 8px; overflow: hidden; }
+            .pricing-table td { text-align: right; padding: 12px 15px; border-bottom: 1px solid var(--beige); position: relative; padding-left: 50%; min-height: 45px; }
+            .pricing-table td::before { content: attr(data-label); position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-weight: 500; text-align: left; color: var(--gray-text); font-size: 0.85rem; text-transform: uppercase;}
             .pricing-table td:last-child { border-bottom: none; }
             
             .pricing-table td:first-child { text-align: left; padding: 15px; text-align: center; }
             .pricing-table td:first-child::before { display: none; }
             .item-desc { margin-top: 8px; display: block; }
             
-            .total-row { border: none !important; margin-bottom: 0; }
-            .total-row td { padding: 20px 15px !important; text-align: center; }
+            .total-row { border: none !important; margin-bottom: 0; background: var(--background-light) !important; border-top: none; }
+            .total-row td { padding: 20px 15px !important; text-align: center; border-top: none; }
             .total-row td:first-child { display: none; }
             .total-row td.amount { font-size: 2rem; padding-left: 15px; }
-            .total-row td.amount::before { content: "Total Inversión (MXN)"; position: static; display: block; text-align: center; transform: none; color: white !important; font-size: 0.9rem; margin-bottom: 8px; font-family: 'Open Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}
+            .total-row td.amount::before { content: "Total Inversión (MXN)"; position: static; display: block; text-align: center; transform: none; color: var(--gray-text); font-size: 0.9rem; margin-bottom: 8px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;}
             
-            .btn-confirm { width: 100%; justify-content: center; font-size: 1.05rem; padding: 14px 20px; flex-wrap: wrap; }
+            .btn-primary { width: 100%; justify-content: center; font-size: 1.05rem; padding: 14px 20px; flex-wrap: wrap; }
         }
     </style>
 </head>
@@ -452,7 +446,7 @@
                 <div class="header-main">
                     <h2>Desayuno Tipo Taquiza</h2>
                     <p>Atención: <strong>Sistema DIF / Lic. Claudia López</strong></p>
-                    <span class="badge-people"><i class="fa-solid fa-users"></i> 125 Invitados</span>
+                    <span class="badge-people"><i class="fa-solid fa-user-group"></i> 125 Invitados</span>
                 </div>
                 <div class="date-box">
                     <span>Fecha Reservada</span>
@@ -461,7 +455,7 @@
             </div>
 
             <!-- Includes Section -->
-            <h3 class="section-title"><i class="fa-solid fa-bell-concierge"></i> ¿Qué incluye el servicio?</h3>
+            <h3 class="section-title"><i class="fa-solid fa-spa"></i> ¿Qué incluye el servicio?</h3>
             
             <div class="includes-grid">
                 <div class="include-item">
@@ -479,7 +473,7 @@
                     </div>
                 </div>
                 <div class="include-item">
-                    <div class="include-icon"><i class="fa-solid fa-taco"></i></div>
+                    <div class="include-icon"><i class="fa-solid fa-heart"></i></div>
                     <div class="include-text">
                         <h4>Menú Selecto</h4>
                         <p>Taquiza tradicional con variedad de guisados a su completa elección.</p>
@@ -502,7 +496,7 @@
             </div>
 
             <!-- Pricing Section -->
-            <h3 class="section-title"><i class="fa-solid fa-file-invoice-dollar"></i> Desglose de Inversión</h3>
+            <h3 class="section-title"><i class="fa-solid fa-envelope-open-text"></i> Desglose de Inversión</h3>
             
             <div class="pricing-container">
                 <div style="overflow-x: auto;">
@@ -537,10 +531,10 @@
             <!-- CTA Section -->
             <div class="cta-section">
                 <p class="cta-text">"Hacemos realidad el evento de tus sueños con la elegancia que mereces."</p>
-                <a href="https://wa.me/5211234567890?text=Hola%20Primavera%20Events%20Group!%20%F0%9F%8C%B8%20Me%20gustar%C3%ADa%20confirmar%20la%20cotizaci%C3%B3n%20para%20el%2013%20de%20Mayo%20(Taquiza%20para%20125%20personas)." class="btn-confirm" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-whatsapp"></i> Confirmar Cotización
+                <a href="https://primaveraeventsgroup.com/richard-hernandez/" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                    Confirmar Cotización <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <p class="disclaimer">Al confirmar, uno de nuestros agentes se comunicará contigo para finalizar los detalles y apartado de fecha.</p>
+                <p class="disclaimer">Al confirmar, serás redirigido a nuestro sitio oficial para reservar tu fecha y afinar detalles.</p>
             </div>
         </div>
     </main>
