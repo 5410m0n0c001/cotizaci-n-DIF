@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotización - Primavera Events Group</title>
-    <!-- Google Fonts for Elegant Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            /* Primavera Events Group Elegant Palette */
-            --primary: #1e362d; /* Deep Forest Green */
-            --primary-light: #2c4d41;
-            --secondary: #d4af37; /* Luxury Gold */
-            --secondary-hover: #c5a02e;
-            --text-dark: #2c3e38;
-            --text-muted: #667872;
-            --bg-color: #f7f9f8;
+            /* Primavera Events Group Official Palette */
+            --primary: #111111; /* Dark/Black detected */
+            --primary-light: #333333;
+            --secondary: #BDC8D5; /* Light Blue/Grey detected */
+            --secondary-hover: #9aa8b8;
+            --accent: #2ea3f2; /* Bright Blue detected */
+            --text-dark: #222222;
+            --text-muted: #666666;
+            --bg-color: #fcfcfc;
             --card-bg: #ffffff;
-            --accent-bg: #faf6ed;
-            --border-color: #e8edea;
+            --accent-bg: #f5f7f9;
+            --border-color: #e2e6ea;
         }
 
         * {
@@ -31,7 +32,7 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-dark);
             line-height: 1.6;
@@ -39,7 +40,7 @@
         }
 
         h1, h2, h3, h4, h5, .serif-text {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Abhaya Libre', serif;
         }
 
         /* Hero Section */
@@ -348,22 +349,22 @@
             align-items: center;
             gap: 10px;
             padding: 16px 45px;
-            background: linear-gradient(135deg, var(--secondary), var(--secondary-hover));
+            background: linear-gradient(135deg, var(--accent), #1c88d1);
             color: white;
             text-decoration: none;
             font-weight: 600;
             border-radius: 50px;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 10px 20px rgba(46, 163, 242, 0.25);
             border: none;
             cursor: pointer;
         }
 
         .btn-confirm:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(212, 175, 55, 0.35);
-            background: linear-gradient(135deg, var(--secondary-hover), #b8860b);
+            box-shadow: 0 15px 25px rgba(46, 163, 242, 0.35);
+            background: linear-gradient(135deg, #1c88d1, #156da8);
         }
 
         .btn-confirm i {
