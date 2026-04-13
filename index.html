@@ -398,21 +398,41 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero { height: 45vh; }
-            .hero h1 { font-size: 2.5rem; }
-            .quote-card { padding: 30px 20px; border-radius: 12px; }
+            .hero { height: 40vh; min-height: 280px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 0.9rem; letter-spacing: 3px; }
+            .container { margin-top: -40px; margin-bottom: 40px; }
+            .quote-card { padding: 25px 15px; border-radius: 12px; }
             
             .header-info { flex-direction: column; text-align: center; gap: 15px; }
             .header-info > div { width: 100%; }
-            .date-box { text-align: center; display: inline-block; width: auto; }
+            .header-main h2 { font-size: 1.8rem; }
+            .date-box { text-align: center; display: block; width: 100%; }
             
-            .pricing-table th:nth-child(2), 
-            .pricing-table td:nth-child(2) {
-                display: none; /* Hide quantity col on small mobile */
-            }
-            .pricing-table th, .pricing-table td { padding: 15px 10px; }
-            .total-row td.amount { font-size: 1.4rem; }
-            .btn-confirm { width: 100%; justify-content: center; }
+            .section-title { font-size: 1.4rem; justify-content: center; text-align: center; flex-wrap: wrap; }
+            .includes-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 30px; }
+            .include-item { padding: 15px; flex-direction: column; text-align: center; align-items: center; }
+            .include-icon { margin-bottom: 5px; }
+            
+            /* Responsive Table Trick */
+            .pricing-table thead { display: none; }
+            .pricing-table, .pricing-table tbody, .pricing-table tr, .pricing-table td { display: block; width: 100%; }
+            .pricing-table tr { margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
+            .pricing-table td { text-align: right; padding: 12px 15px; border-bottom: 1px solid var(--border-color); position: relative; padding-left: 50%; min-height: 45px; }
+            .pricing-table td::before { content: attr(data-label); position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-weight: 600; text-align: left; color: var(--primary); font-size: 0.85rem; }
+            .pricing-table td:last-child { border-bottom: none; }
+            
+            .pricing-table td:first-child { text-align: left; padding: 15px; text-align: center; }
+            .pricing-table td:first-child::before { display: none; }
+            .item-desc { margin-top: 8px; display: block; }
+            
+            .total-row { border: none !important; margin-bottom: 0; }
+            .total-row td { padding: 20px 15px !important; text-align: center; }
+            .total-row td:first-child { display: none; }
+            .total-row td.amount { font-size: 2rem; padding-left: 15px; }
+            .total-row td.amount::before { content: "Total Inversión (MXN)"; position: static; display: block; text-align: center; transform: none; color: white !important; font-size: 0.9rem; margin-bottom: 8px; font-family: 'Open Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;}
+            
+            .btn-confirm { width: 100%; justify-content: center; font-size: 1.05rem; padding: 14px 20px; flex-wrap: wrap; }
         }
     </style>
 </head>
@@ -497,13 +517,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
+                                <td data-label="Servicio">
                                     <span class="item-title">Paquete Desayuno Taquiza Completo</span>
                                     <span class="item-desc">Incluye alimentos, mobiliario, montaje de mesa, bebidas y servicio de personal por el tiempo del evento.</span>
                                 </td>
-                                <td>125</td>
-                                <td class="amount">$260.00</td>
-                                <td class="amount">$32,500.00</td>
+                                <td data-label="Personas">125</td>
+                                <td class="amount" data-label="Costo p/p">$260.00</td>
+                                <td class="amount" data-label="Subtotal">$32,500.00</td>
                             </tr>
                             <tr class="total-row">
                                 <td colspan="3">Total Inversión (MXN)</td>
